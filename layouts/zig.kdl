@@ -1,0 +1,15 @@
+layout {
+  pane_template name="zig-build" command="zig"
+
+  pane split_direction="vertical" {
+    pane
+    pane split_direction="horizontal" {
+      zig-build {
+        args "build" "--watch"
+      }
+      zig-build {
+        args "build" "test" "--watch"
+      }
+    }
+  }
+}
